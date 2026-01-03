@@ -31,3 +31,34 @@ It is designed for testing, analysis, and integration with BI tools like Power B
 3. Load sample data into dimensions (`04_test_data.sql`).
 4. Compile the PL/SQL package (`03_bulk_pkg.sql`) and execute it to generate bulk sales data.
 5. Optionally, create materialized views (`05_mv_top_products.sql`) for analytics.    
+
+
+---Power BI 
+
+# HR Analytics Dashboard
+
+Bu layihə HR (İnsan Resursları) üzrə əsas göstəriciləri vizual şəkildə izləmək və analiz etmək üçün hazırlanmış interaktiv dashboard-dur.
+
+## 🧭 Məqsəd
+- İşçi axını (attrition) və saxlanma göstəricilərinin izlənməsi
+- Demoqrafik və peşə bölgülərinin analizi
+- Maaş aralığı və yaş qruplarına görə paylanmanın qiymətləndirilməsi
+- HR qərarlarının data əsaslı verilməsinə dəstək
+
+## 📊 Əsas Göstəricilər (KPIs)
+- **İşçilərin sayı:** 1242  
+- **İşdən çıxma sayı:** 238  
+- **İşdən çıxma faizi:** 16.1%  
+- **Qadın işçilər:** 87  
+- **Kişi işçilər:** 151  
+
+## 📈 Vizual Bölmələr
+- **Təhsilə görə bölgü:** Life Sciences, Medical, Marketing, Technical Degree, Other, Human Resources  
+- **Yaş qruplarına görə:** 18–25, 26–35, 36–45, 46–55, 55+  
+- **Ailə vəziyyətinə görə:** Single, Married, Divorced  
+- **Top 4 peşə:** Laboratory Technician, Sales Executive, Research Scientist, Sales Representative  
+- **İş stajı (10 ilə qədər):** illərə görə trend  
+- **Maaş aralığına görə:** Upto 5k, 5k–10k, 10k–15k, 15k+  
+
+---
+**Müəllif:** Emin Rəcəbli

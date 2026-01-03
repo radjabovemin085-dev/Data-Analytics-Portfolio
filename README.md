@@ -58,5 +58,18 @@ Bu layihə HR (İnsan Resursları) üzrə əsas göstəriciləri vizual şəkild
 - **İş stajı (10 ilə qədər):** illərə görə trend  
 - **Maaş aralığına görə:** Upto 5k, 5k–10k, 10k–15k, 15k+  
 
+# Python Data Analysis
+
+**Python core biliklərim**, **NumPy** və **Pandas** istifadə edərək **data analizi və data manipulation** üzrə praktiki nümunələri əhatə edir.
+
+## Əhatə olunan mövzular
+- Python core (data tipləri, dövrlər, funksiyalar, exception handling)
+- NumPy (array əməliyyatları, aggregation, broadcasting)
+- Pandas (DataFrame, filtering, groupby, missing values)
+- Data merging (`merge`, `join`, `concat`)
+- Sadə data vizualizasiyası
+
+## Məqsəd
+Data analizi, hesablama və BI alətləri üçün data hazırlığı bacarıqlarını nümayiş etdirmək.
 ---
 **Müəllif:** Emin Rəcəbli

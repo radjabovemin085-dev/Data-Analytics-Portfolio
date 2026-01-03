@@ -1,36 +1,34 @@
-# Oracle Sales SQL Project
+Bu repository **Oracle** üzərində tam **satış məlumatları modelinin** yaradılması üçün nəzərdə tutulmuş **SQL skriptlərini** ehtiva edir.
+Test məqsədləri, analiz və **Power BI kimi BI alətləri ilə inteqrasiya** üçün hazırlanmışdır.
 
-This repository contains SQL scripts for creating a full Oracle sales data model.  
-It is designed for testing, analysis, and integration with BI tools like Power BI.
+**Məzmun**
 
-## Contents
+**Ölçü (Dimension) cədvəlləri**
+dim_customer: Müştəri məlumatları (ID, ad, cins, doğum tarixi, şəhər)
+dim_product: Məhsul kataloqu (ID, ad, kateqoriya, qiymət)
+dim_date: Zaman analitikası üçün tarix cədvəli
+dim_store: Mağazalar və regionlar
 
-### Dimension Tables
-- `dim_customer`: Customer details (ID, name, gender, birth date, city)
-- `dim_product`: Product catalog (ID, name, category, price)
-- `dim_date`: Date table for time intelligence
-- `dim_store`: Stores and regions
+**Fakt cədvəli**
+fact_sales: Müştərilər, məhsullar, mağazalar və tarixlər arasında əlaqəni saxlayan satış tranzaksiyaları
 
-### Fact Table
-- `fact_sales`: Sales transactions linking customers, products, stores, and dates
+**Paketlər**
+sales_data_pkg: `FORALL` istifadə etməklə **1000-dən çox tranzaksiyanı** bulk insert edən PL/SQL paketi
+Xəta emalı (exception handling) və xətaların `error_log` cədvəlinə yazılması daxildir
 
-### Packages
-- `sales_data_pkg`: PL/SQL package for bulk inserting 1000+ transactions using FORALL
-- Includes exception handling and logging into `error_log` table
+**Materialized View-lar**
+mv_top_products: Gəlirə görə **ən yaxşı 5 məhsulu** saxlayır (istəyə uyğun refresh oluna bilər)
 
-### Materialized Views
-- `mv_top_products`: Stores top 5 products by revenue (can be refreshed on demand)
+**Test datası**
+Dimension cədvəllərin nümunə məlumatlarla doldurulması üçün skriptlər
+`fact_sales` cədvəlinə PL/SQL paket vasitəsilə random satış tranzaksiyalarının əlavə edilməsi
 
-### Test Data
-- Scripts to populate dimension tables with sample data
-- Randomized transactions inserted into fact_sales via the package
-
-## Usage
-1. Run the dimension table scripts first (`01_dim_tables.sql`).
-2. Create fact table and error log (`02_fact.sql`).
-3. Load sample data into dimensions (`04_test_data.sql`).
-4. Compile the PL/SQL package (`03_bulk_pkg.sql`) and execute it to generate bulk sales data.
-5. Optionally, create materialized views (`05_mv_top_products.sql`) for analytics.    
+**İstifadə**
+Öncə dimension cədvəlləri yaradın (01_dim_tables.sql).
+Fact cədvəlini və error log-u yaradın (02_fact.sql).
+Dimension cədvəlləri test datası ilə doldurun (04_test_data.sql).
+PL/SQL paketini compile edin (03_bulk_pkg.sql) və bulku satış datası yaratmaq üçün icra edin.
+İstəyə bağlı olaraq analitika üçün materialized view-ları yaradın (05_mv_top_products.sql).
 
 
 ---Power BI 
